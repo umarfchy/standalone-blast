@@ -16,6 +16,7 @@ If you have a fasta file named ```nucleotide.fasta``` containing ```nucleotide s
 
 ```makeblastdb -in nucleotide.fasta -out nucleotide.db -dbtype nucl -parse_seqids```
 
+
 However, If you have a fasta file named ```protein.fasta``` containing ```protein sequeces``` then run the following code on the commandline. 
 
 ```makeblastdb -in protein.fasta -out protein.db -dbtype prot -parse_seqids```
@@ -32,13 +33,13 @@ Here, both query and database are of nucletide sequences. Assuming, you have a q
 
 Here, both query and database are of protein sequences. Assuming, you have a query sequence file named ```file.fasta``` containing protein sequences and your database containing protein sequences, you can run the following command:
 
-```blastn -query file.fasta -db protein.db -out result.csv -outfmt 10```
+```blastp -query file.fasta -db protein.db -out result.csv -outfmt 10```
 
 # Nucleotide 6-frame translation-protein (blastx)
 
 Here, the query contains nucleotide sequences and database contain protein sequences. This program compares the six-frame conceptual translation products of a nucleotide query sequence (both strands) against a protein sequence database. Assuming, you have a query sequence file named ```file.fasta``` containing nucleotide sequences and your database containing protein sequences, you can run the following command: 
 
-```blastn -query file.fasta -db protein.db -out result.csv -outfmt 10```
+```blastx -query file.fasta -db protein.db -out result.csv -outfmt 10```
 
 ### The output files are in csv format with no header!!! Add the header as follows:
 query,subject,percent_identity,alignment,mismatch,gap,q_start,q_end,s_start,s_end,evalue,bit
