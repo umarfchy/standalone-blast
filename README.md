@@ -8,7 +8,7 @@ Open the command line in linux and type the following code to install ncbi-blast
 
 ```sudo apt-get install ncbi-blast+```
 
-# Create a custom datbase
+# Create a custom database
 
 Create a folder where you want to keep your custom database. Copy the fasta file you want to use a database in the folder. 
 
@@ -40,7 +40,7 @@ Here, the query contains nucleotide sequences and database contain protein seque
 
 ```blastn -query file.fasta -db protein.db -out result.csv -outfmt 10```
 
-### The output files are csv files with no header. Add the header as follows:
+### The output files are in csv format with no header!!! Add the header as follows:
 query,subject,percent_identity,alignment,mismatch,gap,q_start,q_end,s_start,s_end,evalue,bit
 
 You can use the following code to add the header using commandline. This can be useful for large files.
