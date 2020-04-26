@@ -25,19 +25,19 @@ Notice, the -dbtype is different for different file type. Also, change the name 
 
 # Perform Nucleotide-nucleotide BLAST (blastn)
 
-Here, both query and database are of nucletide sequences. Assuming, you have a query sequence file named ```file.fasta``` containing nucleotide sequences and your database containing nucleotide sequences, you can run the following command:
+Here, both query and database are of nucletide sequences. Assuming, you have a query sequence file named ```file.fasta``` containing nucleotide sequences and your database contains nucleotide sequences (database name ```nucleotide.db```), you can run the following command:
 
 ```blastn -query file.fasta -db nucleotide.db -out result.csv -outfmt 10```
 
 # Perform Protein-protein BLAST (blastp)
 
-Here, both query and database are of protein sequences. Assuming, you have a query sequence file named ```file.fasta``` containing protein sequences and your database containing protein sequences, you can run the following command:
+Here, both query and database are of protein sequences. Assuming, you have a query sequence file named ```file.fasta``` containing protein sequences and your database contains protein sequences (database name ```protein.db```), you can run the following command:
 
 ```blastp -query file.fasta -db protein.db -out result.csv -outfmt 10```
 
 # Nucleotide 6-frame translation-protein (blastx)
 
-Here, the query contains nucleotide sequences and database contain protein sequences. This program compares the six-frame conceptual translation products of a nucleotide query sequence (both strands) against a protein sequence database. Assuming, you have a query sequence file named ```file.fasta``` containing nucleotide sequences and your database containing protein sequences, you can run the following command: 
+Here, the query contains nucleotide sequences and database contain protein sequences. This program compares the six-frame conceptual translation products of a nucleotide query sequence (both strands) against a protein sequence database. Assuming, you have a query sequence file named ```file.fasta``` containing nucleotide sequences and your database contains protein sequences (database name ```protein.db```), you can run the following command:
 
 ```blastx -query file.fasta -db protein.db -out result.csv -outfmt 10```
 
@@ -47,4 +47,3 @@ query,subject,percent_identity,alignment,mismatch,gap,q_start,q_end,s_start,s_en
 You can use the following code to add the header using commandline. This can be useful for large files.
 
 ```sed -i '1iquery,subject,percent_identity,alignment,mismatch,gap,q_start,q_end,s_start,s_end,evalue,bit' result.csv```
-
