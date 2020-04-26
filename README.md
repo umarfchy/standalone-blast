@@ -47,3 +47,6 @@ query,subject,percent_identity,alignment,mismatch,gap,q_start,q_end,s_start,s_en
 You can use the following code to add the header using commandline. This can be useful for large files.
 
 ```sed -i '1iquery,subject,percent_identity,alignment,mismatch,gap,q_start,q_end,s_start,s_end,evalue,bit' result.csv```
+
+# Analysis
+After adding the header you can analyse the result in either excel or your programming laguage of choice. I have added a python jupyter notebook containing typical analysis. 
