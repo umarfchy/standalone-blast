@@ -1,6 +1,6 @@
 # Introduction
 
-This tutorial aims to show familiarize with the standalone blast program. In order to perform custom blast search this tool especially useful.
+This tutorial shows how to use standalone blast program in Linux based operating system. In order to perform custom blast search this tool is especially useful.
 
 # Installation 
 
